@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:indoor_air_quality/features/air_quality/screens/home.dart';
+import 'package:indoor_air_quality/features/personalization/screens/setting.dart';
 import 'package:indoor_air_quality/utils/constants/colors.dart';
 import 'package:indoor_air_quality/utils/helpers/helper_functions.dart';
 
@@ -37,5 +38,5 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [const HomeScreen(), Container(color: Colors.blue), Container(color: Colors.red)];
+  final screens = [const HomeScreen(), Container(color: Colors.blue), const SettingScreen()];
 }

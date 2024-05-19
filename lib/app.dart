@@ -13,6 +13,7 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       home: const LoginScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
