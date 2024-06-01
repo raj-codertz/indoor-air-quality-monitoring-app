@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "714839162169",
+    "project_id": "indoorairquality-3e923",
+    "storage_bucket": "indoorairquality-3e923.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714839162169:android:d46c830f2c6e0438a33ce8",
+        "android_client_info": {
+          "package_name": "com.example.indoor_air_quality"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714839162169-shcbb9h1sdaa4hn57pee4gke5crc0eip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.indoor_air_quality",
+            "certificate_hash": "12bf619f9a5949992a4be91472ff956c8bc36e4c"
+          }
+        },
+        {
+          "client_id": "714839162169-muf27qqkr6itbaek9loo25ctu485asrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpeQPEwWhwB9CiRlOZAvG2dMQKs9hnknk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714839162169-muf27qqkr6itbaek9loo25ctu485asrg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "714839162169-ec93t7fjb4am9l857sg2mg4ctdve3g9s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.indoorAirQuality"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -19,6 +19,7 @@ class TImages {
       "assets/images/animations/sammy-line-man-receives-a-mail.png";
   static const String verifyIllustration =
       "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
+  static const String decorAnimation = "assets/images/animations/141594-animation-of-docer.json";
 
   // // -- Product Reviews
   static const String userProfileImage1 =
