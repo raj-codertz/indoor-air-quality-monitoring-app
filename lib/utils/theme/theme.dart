@@ -7,6 +7,8 @@ import 'package:indoor_air_quality/utils/theme/custom_theme/elevated_button_them
 import 'package:indoor_air_quality/utils/theme/custom_theme/outlined_button_theme.dart';
 import 'package:indoor_air_quality/utils/theme/custom_theme/text_theme.dart';
 
+import 'custom_theme/text_field_theme.dart';
+
 class TAppTheme {
   // Make the constructor to be private
   TAppTheme._();
@@ -23,7 +25,9 @@ class TAppTheme {
       checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
       appBarTheme: TAppBarTheme.lightAppBarTheme,
       bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
-      chipTheme: TChipTheme.lightChipTheme);
+      chipTheme: TChipTheme.lightChipTheme,
+      inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+  );
 
   static ThemeData darkTheme = ThemeData(
       useMaterial3: true,
@@ -37,5 +41,7 @@ class TAppTheme {
       checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
       appBarTheme: TAppBarTheme.darkAppBarTheme,
       bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
-      chipTheme: TChipTheme.darkChipTheme);
+      chipTheme: TChipTheme.darkChipTheme,
+      inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+  );
 }

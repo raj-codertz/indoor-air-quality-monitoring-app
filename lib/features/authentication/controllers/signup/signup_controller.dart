@@ -9,6 +9,8 @@ class SignupController extends GetxController {
   static SignupController get instance => Get.find();
 
 //   Variables
+  final hidePassword = true.obs;
+  final privacyPolicy = true.obs;
   final email = TextEditingController();
   final firstName = TextEditingController();
   final lastName = TextEditingController();
@@ -27,14 +29,17 @@ class SignupController extends GetxController {
 
       //   Check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) {
-        TFullScreenLoader.stopLoading();
-        return;
-      }
+      if (!isConnected) return;
 
       //   Form validation
-      if (!signupFormKey.currentState!.validate()) {
-        TFullScreenLoader.stopLoading();
+      if (!signupFormKey.currentState!.validate())  return;
+
+    //   Privacy Policy Check
+      if (!privacyPolicy.value) {
+        TLoaders.warningSnackBar(
+            title: 'Accept Privacy Policy',
+            message: 'In order to create account, you must have to read and accept the privacy & terms of use'
+        );
         return;
       }
     } catch (e) {
