@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:indoor_air_quality/data/repositories/authentication/authentication_repository.dart';
 import 'package:indoor_air_quality/utils/constants/image_strings.dart';
 import 'package:indoor_air_quality/utils/popups/full_screen_loader.dart';
 import 'package:indoor_air_quality/utils/popups/loader.dart';
@@ -21,7 +22,7 @@ class SignupController extends GetxController {
   GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
 
 // Signup
-  Future<void> signup() async {
+  void signup() async {
     try {
       //   Start loading
       TFullScreenLoader.openLoadingDialog(
@@ -32,16 +33,19 @@ class SignupController extends GetxController {
       if (!isConnected) return;
 
       //   Form validation
-      if (!signupFormKey.currentState!.validate())  return;
+      if (!signupFormKey.currentState!.validate()) return;
 
-    //   Privacy Policy Check
+      //   Privacy Policy Check
       if (!privacyPolicy.value) {
         TLoaders.warningSnackBar(
             title: 'Accept Privacy Policy',
-            message: 'In order to create account, you must have to read and accept the privacy & terms of use'
-        );
+            message:
+                'In order to create account, you must have to read and accept the privacy & terms of use');
         return;
       }
+      // Register user in the Firebase Authentication & save user data in the Firebase
+      await AuthenticationRepository.instance.registerWithEmailAndPassword(
+          email.text.trim(), password.text.trim());
     } catch (e) {
       TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     } finally {
