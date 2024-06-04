@@ -32,4 +32,11 @@ class TImages {
 
   //Profile
   static const String user = "assets/images/content/user.png";
+
+  //Icons
+  static const String temperature = "assets/icons/temperature.png";
+  static const String humidity = "assets/icons/humidity.png";
+  static const String smoke = "assets/icons/smoke.png";
+  static const String dust = "assets/icons/magic-dust.png";
+
 }
