@@ -5,6 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'app.dart';
 import 'data/repositories/authentication/authentication_repository.dart';
 import 'firebase_options.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
   // Binding widget
@@ -16,5 +17,6 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform
   ).then((FirebaseApp value) => Get.put(AuthenticationRepository()));
 
+  await dotenv.load(fileName: ".env");
   runApp(const App());
 }

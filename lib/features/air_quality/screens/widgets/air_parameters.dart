@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:indoor_air_quality/common/styles/shadows.dart';
-import 'package:indoor_air_quality/utils/constants/colors.dart';
-import 'package:indoor_air_quality/utils/constants/sizes.dart';
-import 'package:indoor_air_quality/utils/helpers/helper_functions.dart';
 
-class TAirParameters extends StatelessWidget {
-  const TAirParameters(
-      {super.key,
-      required this.title,
-      required this.value,
-      required this.unit});
+class SensorCard extends StatelessWidget {
+  final String label;
+  final String value;
+  final String unit;
+  final String iconPath;
 
-  final String title, value, unit;
+  const SensorCard({
+    super.key,
+    required this.label,
+    required this.value,
+    required this.unit,
+    required this.iconPath,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
-
-    return Container(
-      width: 200,
-      padding: const EdgeInsets.all(1),
-      decoration: BoxDecoration(
-          boxShadow: [TShadowStyle.airParametersShadow],
-          borderRadius: BorderRadius.circular(16),
-          color: dark ? TColors.darkerGrey : TColors.white),
-      child: Column(
-        children: [
-          //   Air Parameter
-          Text(title, style: Theme.of(context).textTheme.headlineMedium!.apply(fontSizeFactor: 1.2)),
-          const SizedBox(height: TSizes.spaceBtwSections * 2),
-          //   Value
-          Row(
-            children: [
-              Text(value, style: Theme.of(context).textTheme.labelLarge),
-              const SizedBox(width: TSizes.spaceBtwItems),
-              Text(unit, style: Theme.of(context).textTheme.labelLarge)
-            ],
-          )
-        ],
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(iconPath, width: 40, height: 40),
+            const SizedBox(height: 10),
+            Text(label, style: const TextStyle(fontSize: 18)),
+            const SizedBox(height: 5),
+            Text(
+              '$value$unit',
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }

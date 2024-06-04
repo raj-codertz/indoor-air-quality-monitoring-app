@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indoor_air_quality/features/air_quality/screens/widgets/air_parameters.dart';
 import 'package:indoor_air_quality/features/air_quality/screens/widgets/home_appbar.dart';
 import 'package:indoor_air_quality/utils/constants/sizes.dart';
 import '../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
+import '../controllers/sensor/sensor_controller.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final SensorController sensorController = Get.put(SensorController());
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +25,31 @@ class HomeScreen extends StatelessWidget {
 
             //   Gridview for four air parameters
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace / 3),
               child: Column(
                 children: [
-                  GridView.builder(
-                      itemCount: 4,
-                      physics: const NeverScrollableScrollPhysics(),
+                  Obx(
+                    () => GridView.builder(
                       shrinkWrap: true,
-                      padding: const EdgeInsets.all(0),
+                      physics: const NeverScrollableScrollPhysics(),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              mainAxisSpacing: TSizes.gridViewSpacing,
-                              crossAxisSpacing: TSizes.gridViewSpacing,
-                              mainAxisExtent: 200),
-                      itemBuilder: (_, index) => const TAirParameters(
-                          title: 'Temperature', value: '40', unit: 'C'))
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 8,
+                        mainAxisSpacing: 38,
+                      ),
+                      itemCount: sensorController.myDevices.length,
+                      itemBuilder: (context, index) {
+                        final device = sensorController.myDevices[index];
+                        return SensorCard(
+                          label: device[0],
+                          value: device[2],
+                          unit: device[3],
+                          iconPath: device[1],
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             )
