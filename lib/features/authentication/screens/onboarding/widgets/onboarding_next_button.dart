@@ -23,7 +23,7 @@ class OnboardingNextButton extends StatelessWidget {
               shape: const CircleBorder(),
               backgroundColor: dark ? TColors.primary : Colors.black),
           onPressed: () => OnBoardingController.instance.nextPage(),
-          child: const Icon(Iconsax.arrow_right3),
+          child: const Icon(Iconsax.arrow_right_3),
         ));
   }
 }

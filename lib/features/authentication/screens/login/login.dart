@@ -5,7 +5,6 @@ import 'package:indoor_air_quality/features/authentication/screens/login/widgets
 import 'package:indoor_air_quality/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:indoor_air_quality/utils/constants/sizes.dart';
 import 'package:indoor_air_quality/utils/constants/text_strings.dart';
-import 'package:indoor_air_quality/utils/helpers/helper_functions.dart';
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../common/widgets/login_signup/social_buttons.dart';
 
@@ -14,7 +13,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
         body: SingleChildScrollView(

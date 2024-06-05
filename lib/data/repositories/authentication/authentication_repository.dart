@@ -65,7 +65,24 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-//   Email verification
+//   Login using email and password
+  Future<UserCredential> loginWithEmailAndPassword(String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong, Please try again';
+    }
+  }
+
+  //   Email verification
   Future<void> sendEmailVerification() async {
     try {
       await _auth.currentUser?.sendEmailVerification();
@@ -81,6 +98,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong, Please try again';
     }
   }
+
 
 // Logout function
   Future<void> logout() async {

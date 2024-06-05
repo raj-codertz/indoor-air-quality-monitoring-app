@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:indoor_air_quality/utils/constants/sizes.dart';
 import 'package:indoor_air_quality/utils/device/device_utility.dart';
-import 'package:indoor_air_quality/utils/helpers/helper_functions.dart';
 
 class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TAppBar(
@@ -40,6 +39,5 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(TDeviceUtils.getAppBarHeight());
 }

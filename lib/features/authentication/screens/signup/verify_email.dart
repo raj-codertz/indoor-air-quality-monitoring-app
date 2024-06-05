@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:indoor_air_quality/common/widgets/success_screen/success_screen.dart';
 import 'package:indoor_air_quality/data/repositories/authentication/authentication_repository.dart';
 import 'package:indoor_air_quality/features/authentication/controllers/signup/verify_email_controller.dart';
-import 'package:indoor_air_quality/features/authentication/screens/login/login.dart';
 import 'package:indoor_air_quality/utils/constants/image_strings.dart';
 import 'package:indoor_air_quality/utils/constants/sizes.dart';
 import 'package:indoor_air_quality/utils/constants/text_strings.dart';

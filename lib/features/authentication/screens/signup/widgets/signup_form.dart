@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:indoor_air_quality/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:indoor_air_quality/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
