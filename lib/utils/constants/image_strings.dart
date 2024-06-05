@@ -6,6 +6,8 @@ class TImages {
   static const String google = "assets/logos/google-icon.png";
   static const String facebook = "assets/logos/facebook-icon.png";
 
+  static const String logo = "assets/logos/download.png";
+
   // -- Animations
   static const String productsIllustration =
       "assets/images/animations/sammy-line-workout.gif";

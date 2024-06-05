@@ -7,7 +7,7 @@ import '../../../features/air_quality/models/sensor_data.dart';
 
 class SensorRepository {
   static const String baseUrl =
-      'https://api.thingspeak.com/channels/2528798/feeds.json';
+      'https://api.thingspeak.com/channels/2569700/feeds.json';
 
   final StreamController<SensorData?> _sensorDataStream =
       StreamController<SensorData?>.broadcast();
