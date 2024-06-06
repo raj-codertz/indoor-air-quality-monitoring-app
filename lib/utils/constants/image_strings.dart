@@ -6,7 +6,7 @@ class TImages {
   static const String google = "assets/logos/google-icon.png";
   static const String facebook = "assets/logos/facebook-icon.png";
 
-  static const String logo = "assets/logos/download.png";
+  static const String logo = "assets/icons/awareness.png";
 
   // -- Animations
   static const String productsIllustration =
@@ -38,7 +38,7 @@ class TImages {
   //Icons
   static const String temperature = "assets/icons/temperature.png";
   static const String humidity = "assets/icons/humidity.png";
-  static const String smoke = "assets/icons/smoke.png";
+  static const String smoke = "assets/icons/fire.png";
   static const String dust = "assets/icons/magic-dust.png";
 
 }

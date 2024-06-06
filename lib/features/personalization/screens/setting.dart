@@ -4,6 +4,7 @@ import 'package:indoor_air_quality/common/widgets/appbar/appbar.dart';
 import 'package:indoor_air_quality/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:indoor_air_quality/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:indoor_air_quality/common/widgets/texts/section_heading.dart';
+import 'package:indoor_air_quality/data/repositories/authentication/authentication_repository.dart';
 import 'package:indoor_air_quality/utils/constants/colors.dart';
 import 'package:indoor_air_quality/utils/constants/sizes.dart';
 import '../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -60,7 +61,7 @@ class SettingScreen extends StatelessWidget {
                   SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                          onPressed: () {}, child: const Text('Logout'))),
+                          onPressed: () => AuthenticationRepository.instance.logout(), child: const Text('Logout'))),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5)
                 ],
               ),

@@ -13,14 +13,14 @@ class TTexts {
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Dust";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your door step";
-  static const String onBoardingTitle4 = "Deliver at your door step";
+  static const String onBoardingTitle2 = "Temperature";
+  static const String onBoardingTitle3 = "Humidity";
+  static const String onBoardingTitle4 = "Smoke";
 
-  static const String onBoardingSubTitle1 = "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
-  static const String onBoardingSubTitle2 = "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
-  static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
-  static const String onBoardingSubTitle4 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+  static const String onBoardingSubTitle1 = "Discover the hidden particles that float in the air, affecting your health and comfort.";
+  static const String onBoardingSubTitle2 = "Keep track of the heat levels around you to maintain a comfortable and healthy environment.";
+  static const String onBoardingSubTitle3 = "Monitor and balance moisture levels for enhanced comfort and overall well-being.";
+  static const String onBoardingSubTitle4 = "Identify and mitigate harmful pollutants to ensure cleaner, safer air for everyone.";
 
 
   // -- Authentication Forms
